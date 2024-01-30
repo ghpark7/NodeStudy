@@ -53,3 +53,13 @@ s.forEach((value) => {
 
 s.delete(1); // delete(value)로 Set의 속성 삭제
 s.clear(); // clear()로 Set의 모든 속성 삭제
+console.log(s.size); // 0
+
+
+// 기존 배열에서 중복을 제거하기 위한 수단으로 Set을 사용할 수 있음
+
+const arr = [1, 3, 2, 7, 2, 6, 3, 5];
+
+const ns = new Set(arr); // 배열을 Set으로 변환
+const result = Array.from(ns); // Set을 배열로 변환
+console.log(result); // 1, 3, 2, 7, 6, 5
